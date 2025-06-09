@@ -1,5 +1,6 @@
 
 # 📦 Kinostore – Online Gadget Store
+https://kinostore.store/
 
 Kinostore is a custom-built, fully functional online store that showcases a range of affordable gadgets. It features category filters, search, product detail pages, cart management, and checkout — all hosted on an Amazon EC2 instance.
 
@@ -220,5 +221,6 @@ git push -u origin master
 ## 👨‍🎓 Author
 
 Kinley Phuntsho  
+Student Number: 34645856
 Bachelor of Information Technology – Cybersecurity & Forensics  
 Murdoch University, 2025  
