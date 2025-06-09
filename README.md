@@ -119,7 +119,7 @@ From the Mac terminal(new window, not inside the VM):
 
 ```bash
 # Navigate to the folder
-cd ~/Desktop
+cd ~/Download
 
 # Upload files
 scp -i ~/.ssh/kinokey.pem -r Kinostore/* ubuntu@3.27.61.53:/var/www/html/
