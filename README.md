@@ -205,8 +205,28 @@ sudo certbot --nginx
 ---
 
 ## 🌐 Configure Domain Name
-You can choose from a variety of domain providers like Namecheap, GoDaddy, etc.
+You can choose from a variety of domain providers like Namecheap, GoDaddy, etc., where you can get domains for as little as a dollar.
 
+To configure the domain name using Namecheap, follow these steps:
+
+Go to the Domain List section in your Namecheap dashboard.
+
+Click the Manage button next to your domain name.
+
+Click on the Advanced DNS tab.
+
+Under Host Records, add a new A Record:
+
+Host: @
+
+Value: your EC2 public IP address (e.g.,mine - 3.27.61.53)
+
+TTL: Automatic or 30 minutes
+
+Save the changes.
+<img width="1462" alt="Screenshot 2025-06-09 at 13 48 43" src="https://github.com/user-attachments/assets/54cda53a-8a94-4c77-bd99-4e892a5e7cc4" />
+
+After DNS propagation (which may take a few minutes to several hours), visiting your domain (e.g., http://kinostore.store) will open your deployed website hosted on the EC2 instance.
 
 
 ## 📤 GitHub Deployment Instructions
