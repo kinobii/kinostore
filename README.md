@@ -201,7 +201,7 @@ The images are linked as follows(index.html):
 
 The website has only been working using HTTP till now.
 which will show as `not secure` in the browser
-![image](https://github.com/user-attachments/assets/f56032a8-1fb8-4715-8a62-0db26aea3f53)
+<img src="https://github.com/user-attachments/assets/f56032a8-1fb8-4715-8a62-0db26aea3f53" width="50%" height="50%" />
 
 
 
