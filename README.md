@@ -168,17 +168,21 @@ Now we have a working online store!
 ```
 
 ---
-## 📜 Script Explanation
+## 📜 Custom Script Implementation
+🎯 Purpose & Relevance
+This JavaScript script forms the core functionality of Kinostore. It powers product display, search and category filtering, cart management, and checkout redirection. Without this script, the website would be static and non-functional. The implementation was written from scratch without copying lab examples or online templates.
+🧠 Description of Functions
+• displayProducts(): Dynamically displays all products based on category and search filter.
+• addToCart(): Adds a selected product to the cart and stores it using localStorage.
+• updateCart(): Updates the cart sidebar, count, and total based on items in the cart.
+• toggleCart(): Opens and closes the cart sidebar with smooth animation.
+• checkoutCart(): Checks if the cart has items, then redirects to checkout.html with stored cart items.
+🛠️ How It Was Built
+The script was entirely written by hand using vanilla JavaScript. It integrates deeply with HTML to control product display and cart interactions. Each function is tied to event listeners or DOM elements for dynamic behavior.
+🖼️ Screenshots / Output
+Examples of working script outputs can be found in the website demo video and README screenshots.
+![image](https://github.com/user-attachments/assets/1dced43e-a70a-4dff-a308-b0e9b6b36a0a)
 
-All interactive functionality is powered by a custom-written JavaScript script embedded within `index.html`. This script performs essential store features, including:
-
-- **Dynamic Product Rendering**: Loops through product objects to display them on the homepage
-- **Cart System**: Adds/removes items and calculates totals using `localStorage`
-- **Filtering/Search**: Filters products by category or name in real-time
-- **Product Detail Navigation**: Clicking a product redirects to `product.html` with details passed via query parameters
-- **Checkout Process**: Cart contents are preserved and redirected to `checkout.html` for user input and review
-
-This script ensures the store is fully functional without relying on external plugins or libraries, aligning with the assignment requirement for a custom-coded front-end.
 
 ---
 
