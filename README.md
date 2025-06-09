@@ -202,7 +202,22 @@ The script was entirely written by hand using vanilla JavaScript. It integrates 
 The `product.html` and `checkout.html` pages are linked to `index.html`. When a user clicks on a product card (excluding the "Add to Cart" button), they are redirected to `product.html`, which displays the detailed product description using query parameters passed in the URL. The "Checkout" button in the floating cart sidebar redirects users to `checkout.html`, where they can review their order, enter customer details, select shipping methods, and provide payment information.
 
 The images are linked as follows(index.html):
-<img width="643" alt="Screenshot 2025-06-09 at 12 27 44" src="https://github.com/user-attachments/assets/9a2c9f85-86f1-4e4f-ad5a-ce21dc8e3d47" />
+```bash
+<script>
+    const products = [
+  { name: "Smart Plug", category: "smart-home", price: 12.99, img: "images/sp.png" },
+  { name: "LED Light Strip", category: "lighting", price: 14.99, img: "images/lls.png" },
+  { name: "Mini Tripod", category: "accessory", price: 9.99, img: "images/mtp.png" },
+  { name: "Phone Holder", category: "accessory", price: 7.99, img: "images/ph.png" },
+  { name: "Bluetooth Tracker", category: "smart-home", price: 18.49, img: "images/bt.png" },
+  { name: "Portable Charger", category: "accessory", price: 24.95, img: "images/pc.png" },
+  { name: "Smart Watch", category: "smart-home", price: 49.99, img: "images/sw.png" },
+  { name: "Wireless Earbuds", category: "audio", price: 39.99, img: "images/we.png" },
+  { name: "Bluetooth Speaker", category: "audio", price: 29.99, img: "images/bs.png" },
+  { name: "Ring Light", category: "lighting", price: 22.49, img: "images/rl.png" }
+];
+
+```
  
 ---
 
