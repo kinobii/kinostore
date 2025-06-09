@@ -122,7 +122,7 @@ From the Mac terminal(new window, not inside the VM):
 cd ~/Download
 
 # Upload files
-scp -i ~/Downloads/kinokey.pem -r Kinostore/* ubuntu@3.27.61.53:/var/www/html/
+ scp -i kinokey.pem -r Kinostore/* ubuntu@3.27.61.53:/var/www/html/
 ```
 
 The '*' is used in this command as we are copying only the files inside the Kinostore folder.
