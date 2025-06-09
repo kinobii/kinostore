@@ -224,7 +224,8 @@ Kinley Phuntsho
 Student Number: 34645856 
 
 Bachelor of Information Technology – Cybersecurity & Forensics  
-Murdoch University, 2025  
+Murdoch University, 
+Semester 1, 2025  
 
 ---
 
