@@ -1,6 +1,7 @@
 
 # 📦 Kinostore – Online Gadget Store
 https://kinostore.store/
+IP address: 3.27.61.53
 
 Kinostore is a custom-built online store that showcases a range of affordable gadgets. It features category filters, search, product detail pages, cart management, and checkout — all hosted on an Amazon EC2 instance.
 
@@ -167,6 +168,19 @@ Now we have a working online store!
 ```
 
 ---
+## 📜 Script Explanation
+
+All interactive functionality is powered by a custom-written JavaScript script embedded within `index.html`. This script performs essential store features, including:
+
+- **Dynamic Product Rendering**: Loops through product objects to display them on the homepage
+- **Cart System**: Adds/removes items and calculates totals using `localStorage`
+- **Filtering/Search**: Filters products by category or name in real-time
+- **Product Detail Navigation**: Clicking a product redirects to `product.html` with details passed via query parameters
+- **Checkout Process**: Cart contents are preserved and redirected to `checkout.html` for user input and review
+
+This script ensures the store is fully functional without relying on external plugins or libraries, aligning with the assignment requirement for a custom-coded front-end.
+
+---
 
 ## 💡 Features Included
 
@@ -230,7 +244,7 @@ Under Host Records, add a new A Record:
 
 Host: @
 
-Value: your EC2 public IP address (e.g.,mine - 3.27.61.53)
+Value: your EC2 public IP address (e.g., mine - 3.27.61.53)
 
 TTL: Automatic or 30 minutes
 
