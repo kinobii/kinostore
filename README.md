@@ -201,7 +201,8 @@ The images are linked as follows(index.html):
 
 The website has only been working using HTTP till now.
 which will show as `not secure` in the browser
-![image](https://github.com/user-attachments/assets/7b60902c-b392-45ee-8cf3-efdf2a1fb518)
+![image](https://github.com/user-attachments/assets/f56032a8-1fb8-4715-8a62-0db26aea3f53)
+
 
 
 Execute the following command to allow HTTPS 
@@ -236,7 +237,8 @@ Save the changes.
 <img width="1462" alt="Screenshot 2025-06-09 at 13 48 43" src="https://github.com/user-attachments/assets/54cda53a-8a94-4c77-bd99-4e892a5e7cc4" />
 
 After DNS propagation (which may take a few minutes to several hours), visiting your domain (e.g., https://kinostore.store) will open your deployed website hosted on the EC2 instance.
-![image](https://github.com/user-attachments/assets/5b52a590-c754-4ab5-a521-8f051c7bc997)
+![image](https://github.com/user-attachments/assets/b30a9110-c5c9-4ee6-b4a4-3fdf19d692d3)
+
 
 
 ---
