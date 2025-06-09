@@ -112,12 +112,6 @@ Kinostore/
 
 ### 5️⃣ **Upload to EC2 Server**
 
-Before we upload the folder to the server, I deleted the index.html file, which was already in the /var/www/html directory, to avoid duplicate files.
- The following command was used while inside the VM
- ```bash
-cd /var/www/html
-sudo rm index.html
-```
 **note**: If the permission is denied, always try using `sudo`. (It doesn't hurt to do it)
 Now we can upload the files that are inside the Kinostore folder to the server.
 
