@@ -2,6 +2,7 @@
 # 📦 Kinostore – Online Gadget Store
 https://kinostore.store/
 IP address: 3.27.61.53
+Video explainer: https://echo360.net.au/media/098fd6aa-c66a-47df-88c7-5748379d9874/public
 
 Kinostore is a custom-built online store that showcases a range of affordable gadgets. It features category filters, search, product detail pages, cart management, and checkout — all hosted on an Amazon EC2 instance.
 
