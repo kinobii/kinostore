@@ -35,27 +35,29 @@ Kinostore is a custom-built, fully functional online store that showcases a rang
 
 
 ### 2️⃣ **Connect via SSH from Terminal**
-   - Open your terminal. Make sure you are in the directory where your .pem file is located, for an easier way to SSH into your virtual Machine. I can find the .pem file in the Downloads directory, so the directory was changed to Downloads.
+   - Open your terminal. Make sure you are in the directory where your .pem file is located, for an easier way to SSH into your virtual Machine. The key file is in the Downloads directory, so the directory was changed to Downloads.
 ```bash
 cd Downloads
 ```
-By doing this, I won't have to write down the path to the .pem file, which can be a longer command and can be confusing or cause a typo.
+By doing this, I won't have to write down the path to the key file, which can be a longer command and can be confusing or cause a typo.
 
-The following command was used to set the file’s permissions to read-only for the owner, and no permissions for anyone else.
+The following command was used to set the key file’s permissions to read-only for the owner, and no permissions for anyone else.
 ```bash
 chmod 400 kinokey.pem
 ```
-SSH into the VM
+Now that we have permission we can SSH into the VM. To do so the command is:
+`ssh -i [keyfile].pem ubuntu@your-ip-address`
+
 ```bash
 ssh -i kinokey.pem ubuntu@3.27.61.53
 ```
 
 ---
 
-### 3️⃣ **Install Apache Web Server**
+### 3️⃣ **Install Apache or Nginx Web Server**
 Once inside the VM, install Apache or Nginx Web server.
 In my case, I used Nginx, but it's the same thing.
-I used the following command to install apache
+I used the following command to install Nginx
 
 ```bash
 sudo apt update
@@ -75,8 +77,8 @@ Locally on my Mac(can be PC)
 Wrote basic HTML, CSS, and JavaScript for the website in Microsoft Visual Studio.
 
 **note**: Using a text editor can be helpful, as the terminal text editor does not provide flexibility.
-The index.html file is the main web page, which shows up when you search your IP address in a browser.
 
+The index.html file is the main web page, which shows up when you search your IP address in a browser.
 As an online store, I created 2 other HTML files aside from index.html, namely 
 product.html and checkout.html, all written in Microsoft Visual Studio.
 
@@ -136,6 +138,7 @@ Open a browser:
 ```
 http://3.27.61.53/
 ```
+Now we have a working online store!
 
 ---
 
@@ -199,8 +202,12 @@ sudo apt install certbot python3-certbot-nginx
 sudo certbot --nginx
 
 ```
-
 ---
+
+## 🌐 Configure Domain Name
+You can choose from a variety of domain providers like Namecheap, GoDaddy, etc.
+
+
 
 ## 📤 GitHub Deployment Instructions
 
