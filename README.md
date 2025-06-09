@@ -225,3 +225,10 @@ Student Number: 34645856
 
 Bachelor of Information Technology – Cybersecurity & Forensics  
 Murdoch University, 2025  
+
+---
+
+## 📄 License
+
+This project is licensed under the [MIT License](./LICENSE). See the `LICENSE` file for details.
+
