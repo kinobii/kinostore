@@ -181,7 +181,7 @@ This JavaScript script forms the core functionality of Kinostore. It powers prod
 The script was entirely written by hand using vanilla JavaScript. It integrates deeply with HTML to control product display and cart interactions. Each function is tied to event listeners or DOM elements for dynamic behavior.
 🖼️ Screenshots / Output
 Examples of working script outputs can be found in the website demo video and README screenshots.
-![image](https://github.com/user-attachments/assets/1dced43e-a70a-4dff-a308-b0e9b6b36a0a)
+
 
 
 ---
