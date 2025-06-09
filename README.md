@@ -169,20 +169,21 @@ Now we have a working online store!
 
 ---
 ## 📜 Custom Script Implementation
+```bash
+## 🧠 JavaScript Functionality Breakdown
+
+- `displayProducts()`: Dynamically displays filtered products with query parameters.
+- `addToCart()`: Adds selected product to cart and stores in localStorage.
+- `updateCart()`: Renders cart items and updates count/total dynamically.
+- `toggleCart()`: Toggles sidebar cart view.
+- `checkoutCart()`: Validates and redirects to checkout page with saved cart.
+
+```
 🎯 Purpose & Relevance
 This JavaScript script forms the core functionality of Kinostore. It powers product display, search and category filtering, cart management, and checkout redirection. Without this script, the website would be static and non-functional. The implementation was written from scratch without copying lab examples or online templates.
-🧠 Description of Functions
-• displayProducts(): Dynamically displays all products based on category and search filter.
-• addToCart(): Adds a selected product to the cart and stores it using localStorage.
-• updateCart(): Updates the cart sidebar, count, and total based on items in the cart.
-• toggleCart(): Opens and closes the cart sidebar with smooth animation.
-• checkoutCart(): Checks if the cart has items, then redirects to checkout.html with stored cart items.
+
 🛠️ How It Was Built
 The script was entirely written by hand using vanilla JavaScript. It integrates deeply with HTML to control product display and cart interactions. Each function is tied to event listeners or DOM elements for dynamic behavior.
-🖼️ Screenshots / Output
-Examples of working script outputs can be found in the website demo video and README screenshots.
-
-
 
 ---
 
