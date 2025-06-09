@@ -122,7 +122,13 @@ From the Mac terminal(new window, not inside the VM):
 cd ~/Download
 
 # Upload files
- scp -i kinokey.pem -r Kinostore/* ubuntu@3.27.61.53:/var/www/html/
+ scp -i kinokey.pem -r Kinostore ubuntu@3.27.61.53:~
+```
+Now the Kinostore folder has been copied to the virtual machine.
+Next step, we have to move the files which are inside Kinostore to /var/www/html/ directory
+
+```bash
+mv Kinostore/* /var/www/html/
 ```
 
 The '*' is used in this command as we are copying only the files inside the Kinostore folder.
