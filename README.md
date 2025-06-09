@@ -34,17 +34,17 @@ Kinostore is a custom-built, fully functional online store that showcases a rang
 
 
 ### 2️⃣ **Connect via SSH from Terminal**
-   - Open your terminal. Make sure you are in the directory where your .pem file is located, for an easier way to SSH into your virtual Machine. The .pem file should be in the Downloads directory, so change your directory to Downloads. 
+   - Open your terminal. Make sure you are in the directory where your .pem file is located, for an easier way to SSH into your virtual Machine. I can find the .pem file in the Downloads directory, so the directory was changed to Downloads.
 ```bash
 cd Downloads
 ```
-By doing this, you won't have to write down the path to your pem file, which can be a longer command and can be confusing or cause a typo.
+By doing this, I won't have to write down the path to the .pem file, which can be a longer command and can be confusing or cause a typo.
 
-Use the following command to set the file’s permissions to read-only for the owner, and no permissions for anyone else.
+The following command was used to set the file’s permissions to read-only for the owner, and no permissions for anyone else.
 ```bash
 chmod 400 kinokey.pem
 ```
-SSH into your VM
+SSH into the VM
 ```bash
 ssh -i kinokey.pem ubuntu@3.27.61.53
 ```
@@ -52,26 +52,26 @@ ssh -i kinokey.pem ubuntu@3.27.61.53
 ---
 
 ### 3️⃣ **Install Apache Web Server**
-Once you are inside your VM install Apache or Nginx Web server.
+Once inside the VM, install Apache or Nginx Web server.
 In my case, I used Nginx, but it's the same thing.
 I used the following command to install apache
 
 ```bash
 sudo apt update
-sudo apt install apache2
-sudo systemctl enable apache2
-sudo systemctl start apache2
+sudo apt install nginx
+sudo systemctl enable nginx
+sudo systemctl start nginx
 ```
 
-Test it in browser: `http:/3.27.61.53/`
-If you see a page about Ubuntu/Apache, then you are in. Your website works!
+Tested it in browser: `http:/3.27.61.53/`
+The browser shows a page saying the website works!
 
 ---
 
 ### 4️⃣ **Prepare Website Files**
 
 Locally on my Mac(can be PC)
-Write a basic HTML, CSS, and JavaScript for the website in any text editor of your choice(Microsoft Visual Studio recommended).
+Wrote basic HTML, CSS, and JavaScript for the website in Microsoft Visual Studio.
 
 **note**: Using a text editor can be helpful, as the terminal text editor does not provide flexibility.
 The index.html file is the main web page, which shows up when you search your IP address in a browser.
@@ -112,7 +112,7 @@ Before we upload the folder to the server, I deleted the index.html file, which 
 cd /var/www/html
 rm index.html
 ```
-Now we can upload the Kinostore folder to the server.
+Now we can upload the files that are inside the Kinostore folder to the server.
 
 From the Mac terminal(new window, not inside the VM):
 
@@ -123,18 +123,9 @@ cd ~/Desktop
 # Upload files
 scp -i ~/.ssh/kinokey.pem -r Kinostore/* ubuntu@3.27.61.53:/var/www/html/
 ```
-Now we have the Kinostore folder inside the /var/www/html/ directory. We need to remove all the files outside of the Kinostore folder and keep them inside the /var/www/html/ directory.
-Use the 'mv' command to move all the files out of the Kinostore Directory
 
-Inside your VM Terminal:
+The '*' is used in this command as we are copying only the files inside the Kinostore folder.
 
-```bash
-mv /var/www/html/kinostore/* /var/www/html/
-```
-Now the Kinstore folder is empty, we don't need it, so we delete it using the following command:
-```bash
-rmdir /var/www/html/kinostore
-```
 ---
 
 ### 6️⃣ **Access the Website**
@@ -180,6 +171,13 @@ http://3.27.61.53/
 - 🌐 Favicon and branding integration
 - 🎨 Smooth scrolling and animated interactions
 
+**Linking the pages**:
+
+The `product.html` and `checkout.html` pages are linked to `index.html`. When a user clicks on a product card (excluding the "Add to Cart" button), they are redirected to `product.html`, which displays the detailed product description using query parameters passed in the URL. The "Checkout" button in the floating cart sidebar redirects users to `checkout.html`, where they can review their order, enter customer details, select shipping methods, and provide payment information.
+
+The images are linked as follows(index.html):
+<img width="643" alt="Screenshot 2025-06-09 at 12 27 44" src="https://github.com/user-attachments/assets/9a2c9f85-86f1-4e4f-ad5a-ce21dc8e3d47" />
+ 
 ---
 
 ## 🧾 How Checkout Works
@@ -192,11 +190,13 @@ http://3.27.61.53/
 
 ---
 
-## 🔒 (Optional) Enable HTTPS with Certbot
+## 🔒 Enable HTTPS with Certbot
 
 ```bash
-sudo apt install certbot python3-certbot-apache
-sudo certbot --apache
+sudo apt update
+sudo apt install certbot python3-certbot-nginx
+sudo certbot --nginx
+
 ```
 
 ---
