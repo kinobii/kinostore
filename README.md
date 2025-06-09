@@ -2,7 +2,7 @@
 # 📦 Kinostore – Online Gadget Store
 https://kinostore.store/
 
-Kinostore is a custom-built, fully functional online store that showcases a range of affordable gadgets. It features category filters, search, product detail pages, cart management, and checkout — all hosted on an Amazon EC2 instance.
+Kinostore is a custom-built online store that showcases a range of affordable gadgets. It features category filters, search, product detail pages, cart management, and checkout — all hosted on an Amazon EC2 instance.
 
 ---
 
@@ -35,7 +35,7 @@ Kinostore is a custom-built, fully functional online store that showcases a rang
 
 
 ### 2️⃣ **Connect via SSH from Terminal**
-   - Open your terminal. Make sure you are in the directory where your .pem file is located, for an easier way to SSH into your virtual Machine. The key file is in the Downloads directory, so the directory was changed to Downloads.
+   - Open your terminal. Make sure you are in the directory where your key file is located for an easier way to SSH into your virtual Machine. The key file is in the Downloads directory, so the directory was changed to Downloads.
 ```bash
 cd Downloads
 ```
@@ -45,10 +45,12 @@ The following command was used to set the key file’s permissions to read-only 
 ```bash
 chmod 400 kinokey.pem
 ```
-Now that we have permission we can SSH into the VM. To do so the command is:
-`ssh -i [keyfile].pem ubuntu@your-ip-address`
+Now that we have permission, we can SSH into the VM. To do so, the following command is executed:
+
+eg., `ssh -i [keyfile].pem ubuntu@your-ip-address`
 
 ```bash
+#mine
 ssh -i kinokey.pem ubuntu@3.27.61.53
 ```
 
@@ -56,7 +58,7 @@ ssh -i kinokey.pem ubuntu@3.27.61.53
 
 ### 3️⃣ **Install Apache or Nginx Web Server**
 Once inside the VM, install Apache or Nginx Web server.
-In my case, I used Nginx, but it's the same thing.
+In my case, I used Nginx, but it's the same thing but stick to one.
 I used the following command to install Nginx
 
 ```bash
@@ -80,9 +82,9 @@ Wrote basic HTML, CSS, and JavaScript for the website in Microsoft Visual Studio
 
 The index.html file is the main web page, which shows up when you search your IP address in a browser.
 As an online store, I created 2 other HTML files aside from index.html, namely 
-product.html and checkout.html, all written in Microsoft Visual Studio.
+`product.html` and `checkout.html`, all written in Microsoft Visual Studio.
 
-I also created a folder that has my logo image and all the images for the products that are to be listed on my website.
+I also created a folder that has my `logo` image and all the images for the products that are to be listed on my website.
 
 The files are all on my Desktop inside a folder called Kinostore. 
 
@@ -113,8 +115,9 @@ Before we upload the folder to the server, I deleted the index.html file, which 
  The following command was used while inside the VM
  ```bash
 cd /var/www/html
-rm index.html
+sudo rm index.html
 ```
+**note**: if the permission is denied, always try using `sudo`. (It doesn't hurt to do it)
 Now we can upload the files that are inside the Kinostore folder to the server.
 
 From the Mac terminal(new window, not inside the VM):
@@ -196,6 +199,9 @@ The images are linked as follows(index.html):
 
 ## 🔒 Enable HTTPS with Certbot
 
+The website has only been working using HTTP till now.
+which will show as `not secure` in the browser
+
 ```bash
 sudo apt update
 sudo apt install certbot python3-certbot-nginx
@@ -226,22 +232,7 @@ TTL: Automatic or 30 minutes
 Save the changes.
 <img width="1462" alt="Screenshot 2025-06-09 at 13 48 43" src="https://github.com/user-attachments/assets/54cda53a-8a94-4c77-bd99-4e892a5e7cc4" />
 
-After DNS propagation (which may take a few minutes to several hours), visiting your domain (e.g., http://kinostore.store) will open your deployed website hosted on the EC2 instance.
-
-
-## 📤 GitHub Deployment Instructions
-
-1. Create GitHub repository (e.g., `kinostore`)
-2. Push your local project folder:
-
-```bash
-cd ~/Desktop/Kinostore
-git init
-git add .
-git commit -m "Initial commit"
-git remote add origin https://github.com/yourusername/kinostore.git
-git push -u origin master
-```
+After DNS propagation (which may take a few minutes to several hours), visiting your domain (e.g., https://kinostore.store) will open your deployed website hosted on the EC2 instance.
 
 ---
 
